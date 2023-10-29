@@ -59,11 +59,11 @@ export const config = {
     capabilities: [{
         platformName                : "Android",
         "appium:automationName"     : 'UiAutomator2',
-        "appium:deviceName"         : '<INSERT DEVICE NAME>',
+        "appium:deviceName"         : 'Redmi Note 8 Pro',
         "appium:platformVersion"    : '11.0',
-        "appium:app"                : path.join(process.cwd(),'./test/apk/ApiDemos-debug.apk'),
-        "appium:appPackage"         : "io.appium.android.apis",
-        "appium:appActivity"        : ".ApiDemos",
+        "appium:app"                : path.join(process.cwd(),'./test/apk/Diet_meal.apk'),
+        "appium:appPackage"         : "com.fghilmany.dietmealapp",
+        "appium:appActivity"        : ".ui.main.MainActivity",
         "appium:noReset"            : true,
         "appium:forceAppLaunch"     : true,
     }],
@@ -98,7 +98,7 @@ export const config = {
     // with `/`, the base url gets prepended, not including the path portion of your baseUrl.
     // If your `url` parameter starts without a scheme or `/` (like `some/path`), the base url
     // gets prepended directly.
-    baseUrl: 'http://127.0.0.1',
+    baseUrl: 'localhost',
     //
     // Default timeout for all waitFor* commands.
     waitforTimeout: 10000,
@@ -119,7 +119,7 @@ export const config = {
             'appium',
             {
                 args : {
-                    address : '127.0.0.1',
+                    address : 'localhost',
                     port    : 4723,
                 },
                 logPath : './log',
